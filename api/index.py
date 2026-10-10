@@ -46,4 +46,4 @@ def metrics(q: Query):
             "avg_uptime": float(up.mean()),
             "breaches": int((lat > q.threshold_ms).sum()),
         }
-    return {**result, "regions": result}
+    return result
